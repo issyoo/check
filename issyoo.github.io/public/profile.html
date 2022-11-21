@@ -1,0 +1,412 @@
+<head>
+
+  <title>issyoo - profile</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#000">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <link rel="stylesheet" 
+
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Nunito:ital,wght@1,700&family=Patrick+Hand&family=Quicksand:wght@700&display=swap">
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@600&display=swap');
+
+</style>
+
+  <style>
+
+    *{
+      font-family: 'Poppins';
+      }
+
+    #theme1{
+      color: #fff;
+      }
+
+     #theme2{
+      color: pink;
+    }
+
+    body{
+      padding:0;
+      margin:0;
+      }
+  button {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+  width: 40vw;
+  }
+  #theme1{
+  background: linear-gradient( -20deg, #fff 80%, #000 2%);
+  }
+
+  #theme2 {
+  background: linear-gradient( -20deg, #000 80%, #fff 2%);
+  }
+
+  
+    #progg{
+  height: 4px;
+  width: 10vw;
+  position: absolute;
+  top:0;
+  left:0;
+  background-color:red;
+  animation: load 3s infinite;
+  border-radius: 3px;
+}
+    #theme1 #progg{
+      background-color: #fff;
+      }
+    #theme2 #progg{
+      background-color: pink;
+      }
+
+@keyframes load{
+  from{left:0}
+  to{left:90vw}
+}
+    #menu{ 
+      width: 100vw;
+      height: 48px;
+      align-items: stretch;
+  mix-blend-mode: difference;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border-top: solid;
+  background-color: #000;
+      }
+    #menu button {
+      min-width: 20vw;
+      background-color: #000;
+      }
+    #theme1 #menu button{
+      color: #fff;
+      }
+    #theme2 #menu button{
+      color: pink;
+      }
+    #container{
+      margin-top: 60px;
+}
+    .div{
+  position: relative;
+  padding: 12px;
+  overflow: hidden;
+  margin:0;
+  transition: background 400ms;
+      }
+    span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+    #pPic{
+      height: 65px;
+      border-radius: 50%;
+      }
+#namer{
+   display:flex;
+   flex-direction: column;
+   justify-content:center;
+   align-items:center;
+border-bottom: solid;
+margin: 23px;
+padding: 23px;
+}
+#name{
+font-size: 22px;
+font-weight: 700;
+}
+#inf , #morebtn{
+margin: 23px;
+padding:0;
+border: solid gray 1px;
+border-radius:22px;
+overflow: hidden;
+}
+#inf div{
+margin:0;
+border-bottom: solid gray 1px;
+}
+#inf div:last-child {
+border-bottom:none;
+}
+#morebtn{
+display: flex;
+}
+#morebtn button{
+margin:0;
+border-radius:0;
+border-right: solid gray 1px;
+width:50%;
+padding: 5vw;
+}
+#theme2 #morebtn button{
+background-color: #000;
+color: pink;
+}
+#morebtn button:last-child {
+border-right:none;
+}
+span{
+mix-blend-mode: difference;
+}
+  </style>
+
+</head>
+
+<body>
+
+<div id="progg"></div>
+<div id="container">
+<div id="namer">
+<img id="pPic">
+ <span id="name"></span></div>
+ <div class="div" style='font-size:10px; display:flex;justify-content:center;'><span>joined on </span><span id="time"></span></div>
+<div id="inf">
+ <div class="div"><span class="material-symbols-outlined" id="gender_sym"></span> <span>Gender: </span><span id="gender"></span></div>
+ <div class="div"><span class="material-symbols-outlined">cake</span> <span>D.O.B.: </span><span id="dob"></span></div>
+ <div class="div"><span class="material-symbols-outlined">email</span> <span>Email: </span><span id="email"></span></div>
+ <div class="div"><span class="material-symbols-outlined">phone</span> <span>Phone: </span><span id="phone"></span></div>
+  </div> </div>
+<div id="morebtn">
+<button class="material-symbols-outlined option"onclick="window.open('/editprofile.html','_self'); createRipple()">edit</button>
+<button class="material-symbols-outlined option"onclick="window.open('/theme.html','_self'); createRipple()">auto_mode</button>
+</div>
+<div id="menu">
+
+  <button class="material-symbols-outlined" onclick="window.open('/chat.html','_self')">chat</button>
+  <button class="material-symbols-outlined" onclick="window.open('/groups.html','_self')">groups</button>
+  <button class="material-symbols-outlined" onclick="window.open('/','_self')">home</button>
+  <button class="material-symbols-outlined" style="color: #000; background-color: #fff;">manage_accounts</button>
+  <button class="material-symbols-outlined"onclick="window.open('/dashboard.html','_self')">dashboard</button>
+
+  </div>
+
+</body>
+
+ <script type="module">
+
+  // Import the functions you need from the SDKs you need
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyAN-X9u7n7QnM8RLrVV4YnXq2MmVz6WNfw",
+
+    authDomain: "em-issyoo.firebaseapp.com",
+
+    projectId: "em-issyoo",
+
+    storageBucket: "em-issyoo.appspot.com",
+
+    messagingSenderId: "33480809995",
+
+    appId: "1:33480809995:web:74df1e056f7638d0b5310e",
+
+    measurementId: "G-C64NWHRT0Y"
+
+  };
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  const analytics = getAnalytics(app);
+
+  
+
+  import{
+
+      getFirestore,Timestamp , doc, getDoc, getDocs, limit, orderBy, query, where, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField, onSnapshot, arrayUnion
+
+  }from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
+
+  import { getAuth, signInWithPopup,signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider , signOut
+
+  } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
+
+  const auth = getAuth();
+
+  const db = getFirestore();
+
+      
+
+      async function Check_login_data(){
+
+var uid = sessionStorage.getItem("uid");
+
+var q = query(collection(db, "People"), where("Uid", "==", uid));
+
+const querySnapshot = await getDocs(q);
+
+querySnapshot.forEach((doc) => {
+
+  // doc.data() is never undefined for query doc snapshots
+
+  const name = doc.data().Name;
+  const phone = doc.data().Phone;
+  const email = doc.data().Email;
+  const dob = doc.data().Dob;
+  const time = doc.data().Time;
+  const gender = doc.data().Gender;
+  const pPic = doc.data().Pic;
+  document.getElementById("name").textContent = name;
+  document.getElementById("time").textContent = time.toDate();
+  if(!!gender){
+  document.getElementById("gender_sym").textContent = gender;
+  document.getElementById("gender").textContent = gender;
+    }
+  if(!!dob){
+  document.getElementById("dob").textContent = dob;}
+  if(!!email){
+  document.getElementById("email").textContent = email;}
+  if(!!phone){
+  document.getElementById("phone").textContent = phone;}
+  if(!!pPic){
+  document.getElementById("pPic").setAttribute("src", pPic);}
+  document.getElementById("progg").hidden = true;
+});
+
+      
+
+      }
+
+    Check_login_data()
+
+ 
+
+async function Signout(){
+
+signOut(auth).then(() => {
+
+  
+
+  sessionStorage.removeItem("uid");
+
+  sessionStorage.removeItem("anonymous");
+
+  //alert(" Sign-out successful.");
+
+  window.open("/signin", "_self");
+
+}).catch((error) => {
+
+  alert(" An error happened.");
+
+});
+
+  }
+
+</script>
+
+<script>
+
+  var uid = sessionStorage.getItem("uid");
+  if(uid){
+     console.log(uid);
+    }
+
+  else{ window.open("/signin.html", "_self")}
+  var gen = localStorage.getItem("Gen");
+
+  function getColor(){
+    if(gen == "theme1"){
+      var color = "rgb(25,125,255)";
+      document.body.id = "theme1";
+      }
+    else{ var color = "rgb(255,195,195)";
+        document.body.id = "theme2";
+        }
+    }
+
+  getColor();
+
+  function nav(){
+
+ var dash = document.getElementById("nav");
+
+  if(dash.style.width == ""){
+
+    dash.style.width = "200px";
+
+  }
+
+  else{
+
+    dash.style.width = "";
+
+  }
+
+}
+  function createRipple() {
+
+  const button = event.currentTarget;
+
+  const circle = document.createElement("span");
+
+  const diameter = Math.max(button.clientWidth, button.clientHeight);
+
+  const radius = diameter / 2;
+
+  circle.style.width = circle.style.height = `${diameter}px`;
+
+  circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+
+  circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+
+  circle.classList.add("ripple");
+
+  const ripple = button.getElementsByClassName("ripple")[0];
+
+  if (ripple) {
+
+    ripple.remove();
+
+  }
+
+  button.appendChild(circle);
+
+}
+
+const buttons = document.getElementsByClassName("div");
+
+for (const button of buttons) {
+
+  button.addEventListener("click", createRipple);
+
+}
+  </script>
