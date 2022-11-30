@@ -45,10 +45,10 @@ async function newData() {
         snapshot.docChanges().forEach((change) => {
             if (change.type === "added") {
                 console.log("New msg: " + change.doc.data());
-                var div = document.createElement('div');
+                var div = new Elem('div', cont);
                 var div = document.createElement('div');
                 var cont = document.createElement('div');
-                cont.appendChild(div);
+              //  cont.appendChild(div);
                 document.getElementById("body").appendChild(cont);
                 if (!!change.doc.data().FileTyp) { var ffl = change.doc.data().FileTyp; }
                 else { ffl = 'iframe'; }
@@ -225,4 +225,14 @@ else {
     header.innerHTML = 'Issyoo';
     document.head.appendChild(header);
     newData();
+}
+
+class Elem {
+    constructor(name ,container){
+   let div = document.createElement(name);
+   this.container.appendChild(div);
+  }
+  class(className){
+  this.name.setAttribute('class', className);
+  }
 }
