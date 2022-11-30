@@ -46,7 +46,6 @@ async function newData() {
             if (change.type === "added") {
                 console.log("New msg: " + change.doc.data());
                 var div = new Elem('div', cont);
-                var div = document.createElement('div');
                 var cont = document.createElement('div');
               //  cont.appendChild(div);
                 document.getElementById("body").appendChild(cont);
@@ -54,10 +53,10 @@ async function newData() {
                 else { ffl = 'iframe'; }
                 let ifrm = document.createElement(ffl);
                 ifrm.setAttribute("src", change.doc.data().Url);
-                div.setAttribute('id', change.doc.id);
+                div.attr('id', change.doc.id);
                 ifrm.controls = false;
-                div.onclick = openCont;
-                div.appendChild(ifrm);
+               // div.onclick = openCont;
+               // div.appendChild(ifrm);
                 var title = document.createElement('span');
                 var img = document.createElement('img');
                 title.appendChild(img);
@@ -85,7 +84,7 @@ async function newData() {
                 tbox.setAttribute("class", 'tBox');
                 ifrm.setAttribute("class", 'ifrm');
                 title.setAttribute("class", 'title');
-                div.setAttribute('class', 'cont');
+                div.attr('class', 'cont');
                 cont.setAttribute("class", 'box');
             }
             if (change.type === "modified") {
@@ -232,7 +231,7 @@ class Elem {
    let div = document.createElement(name);
    this.container.appendChild(div);
   }
-  class(className){
-  this.name.setAttribute('class', className);
+  class(attr, attrName){
+  this.name.setAttribute(attr, attrName);
   }
 }
