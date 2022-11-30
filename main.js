@@ -229,7 +229,7 @@ else {
 class Elem {
     constructor(name ,container){
    let div = document.createElement(name);
-   this.container.appendChild(div);
+   container.appendChild(div);
   }
   attr(attrName, attrVal){
   this.name.setAttribute(attrName, attrVal);
