@@ -231,7 +231,7 @@ class Elem {
    let div = document.createElement(name);
    this.container.appendChild(div);
   }
-  class(attr, attrName){
-  this.name.setAttribute(attr, attrName);
+  attr(attrName, attrVal){
+  this.name.setAttribute(attrName, attrVal);
   }
 }
