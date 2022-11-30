@@ -1,0 +1,223 @@
+body{
+    font-family: 'Poppins';
+    margin:0;
+    color: #fff;
+   //   background: linear-gradient(-20deg, #fff 83%,#000 10%);
+    padding:0;
+    background-color: rgb(15,15,15);
+    }
+  #addC{
+    margin: 23px;
+    position: absolute;
+    bottom:0;
+    right:0;
+    padding:10px;
+    border-radius:50%;
+    background: transparent;
+    }
+.cont{
+    width: 100vw;
+    min-height: 200px;
+    max-height: 450px;
+    overflow:hidden;
+    background-color:#000;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 13px;
+    }
+.box, .infobox{
+display: flex;
+flex-direction: column;
+background-color: #000;
+}
+.box .title{
+display: flex;
+align-items:center;
+}
+.tname{
+   font-weight:900;
+   font-size: 18px;
+}
+.name{
+  font-size: 10px;
+}
+.tBox{
+display: flex;
+justify-content: space-between;
+align-items:center;
+}
+.moreBtn:active{
+background-color: rgb(255,255,255,0.2);
+}
+.ifrm{
+width: 100%;
+border-radius: 13px;
+}
+@media only screen and (min-width: 600px) {
+  .cont{
+   width: 200px;
+   height: 100px;
+   overflow:hidden;
+   border-radius: 13px;
+ }
+.box{
+display: flex;
+flex-direction: row;
+}
+.ifrm{
+width: 200px !important;
+border-radius: 13px;
+}
+
+}
+    #body{
+    margin-bottom: 28vw;
+}
+    button{
+    border: none;
+    overflow: hidden;
+    background: transparent;
+    color: #fff;
+   }
+    #menu{
+      width: 100vw;
+      height: 48px;
+      align-items: stretch;
+  position: fixed;
+  padding:0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: hidden;
+  align-items:center;
+  overflow-y: hidden;
+  background-color: #000;
+  border-top: solid rgb(99,99,99) 1px;
+      }
+#menu button {
+color: #fff;
+}
+  .inpBox{
+font-family: 'Quicksand';
+margin: 0;
+top:0;
+padding: 7px 0;
+border-bottom: solid rgb(99,99,99) 1px;
+display: flex;
+flex-direction: row;
+align-items:center;
+justify-content: space-between;
+height: 52px;
+background-color: rgb(12,12,12);
+font-weight: 800;
+color: #fff;
+}
+    .inpBox span {
+        padding: 5px;
+    }
+    .inpBox p {
+        font-size: 23px;
+      //  mix-blend-mode: difference;
+    }
+.inpBox input{
+ outline: none;
+border:none;
+padding: 5px;
+font-size: 19px;
+}
+#dash{
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  position:fixed;
+  top:0;
+  left: -100vw;
+  z-index: 2;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.openDash{
+  left: 0 !important;
+}
+#closeDash{
+  cursor: pointer;
+}
+#menuBody div{
+  background-color: #000;
+  width: 100vw;
+  text-align: center;
+  padding-top: 25px;
+  border-bottom: solid 1px #fff;
+}
+#menuBody div:last-child{
+  border-bottom:none;
+}
+#menuFoot{
+font-size: 10px;
+display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  color: #fff;
+}
+#menuFoot img{
+width: 17px;
+height: 17px;
+}
+a{
+color: #fff;
+}
+#profile{
+color: #fff;
+font-size:9px;
+//mix-blend-mode: difference;
+border: solid rgb(99,99,99) 1px;
+}
+    #menuBody div a {
+        text-align: center;
+        //color: #fff;
+        text-decoration: none;
+        margin: 12px 0;
+    }
+#newContent{
+width: 100vw;
+min-height: 100vh;
+background-color: rgb(245,245,255);
+position: fixed;
+top:0;
+color:#000;
+}
+#load{
+color:#000;
+}
+    @media only screen and (min-width: 600px) {
+        .cont video {
+            width: auto;
+            max-height: 30vh !important;
+        }
+         .inpBox{
+    cursor: pointer;
+        }
+#menu{
+      margin: auto;
+      width: 400px;
+      height: 48px;
+      align-items: stretch;
+  position: fixed;
+  padding:0;
+  bottom: 0;
+  left:0;
+  right:0;
+  display: '';
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: hidden;
+  align-items:center;
+  overflow-y: hidden;
+  background-color: #000;
+  border-top: solid rgb(99,99,99) 1px;
+  border-radius: 19px 19px 0 0;
+      }
+    }
